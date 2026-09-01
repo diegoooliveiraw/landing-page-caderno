@@ -205,15 +205,18 @@ body {
 
 .steps-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    /* Altera para 5 colunas de tamanho igual */
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    /* Gap ajustado para caber 5 colunas com respiro */
     margin-bottom: 40px;
     position: relative;
 }
 
 .step-card {
     background-color: var(--bg-card);
-    padding: 24px;
+    padding: 20px 16px;
+    /* Padding interno ligeiramente reduzido */
     border-radius: 8px;
     border: 1px solid var(--border-color);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
@@ -221,13 +224,15 @@ body {
     z-index: 1;
 }
 
-/* Linha tracejada horizontal ligando os cards */
+/* Linha tracejada horizontal ajustada para a nova distância entre cards */
 .step-card:not(:last-child)::after {
     content: '';
     position: absolute;
-    top: 40px;
-    right: -24px;
-    width: 24px;
+    top: 36px;
+    right: -16px;
+    /* Acompanha o valor do gap */
+    width: 16px;
+    /* Acompanha o valor do gap */
     height: 2px;
     border-top: 2px dashed var(--primary-brand);
     z-index: 2;
@@ -485,6 +490,24 @@ body {
 }
 
 /* --- RESPONSIVIDADE --- */
+@media (max-width: 992px) {
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    /* Em telas menores, a linha tracejada passa a ser vertical */
+    .step-card:not(:last-child)::after {
+        top: 100%;
+        left: 32px;
+        right: auto;
+        width: 2px;
+        height: 32px;
+        border-top: none;
+        border-left: 2px dashed var(--primary-brand);
+    }
+}
+
 @media (max-width: 900px) {
     .steps-grid {
         grid-template-columns: 1fr;
