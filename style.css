@@ -1,0 +1,527 @@
+/* --- RESET & VARIÁVEIS (Paleta Personalizada) --- */
+:root {
+    --primary-dark: #6F1A06;
+    /* Vinho/Castanho - Textos principais e destaques fortes */
+    --primary-brand: #F26432;
+    /* Laranja/Coral - Botões de ação (CTA) e destaques de foco */
+    --bg-light: #FDFCE8;
+    /* Creme claro - Fundo da página e áreas limpas */
+
+    --bg-card: #FFFFFF;
+    /* Branco puro - Cards para gerar contraste do fundo creme */
+    --text-main: #331006;
+    /* Tom bem escuro derivado do 6F1A06 para leitura excelente */
+    --text-muted: #664840;
+    /* Tom médio para textos secundários */
+    --border-color: #E8E5CE;
+    /* Borda suave baseada no tom do fundo */
+
+    --font-main: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-main);
+    line-height: 1.6;
+    background-color: var(--bg-light);
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- BOTÕES --- */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-brand);
+    color: #FFFFFF;
+    padding: 16px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 12px rgba(242, 100, 50, 0.25);
+}
+
+.btn-primary:hover {
+    background-color: #D95323;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(242, 100, 50, 0.35);
+}
+
+.btn-large {
+    width: 100%;
+    max-width: 400px;
+    font-size: 1.1rem;
+}
+
+.microcopy {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+/* --- 1. HERO --- */
+.hero {
+    padding: 60px 0;
+    background-color: var(--bg-light);
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.badge {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #F5F1CD;
+    color: var(--primary-dark);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin: 12px 0;
+    letter-spacing: -0.5px;
+    color: var(--primary-dark);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text-main);
+}
+
+.description {
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.features {
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-bottom: 24px;
+    color: var(--primary-dark);
+}
+
+.product-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* --- 2. PROBLEMAS --- */
+.problems {
+    padding: 60px 0;
+    background-color: var(--bg-card);
+}
+
+.problems h2 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    color: var(--primary-dark);
+}
+
+.subtitle {
+    color: var(--text-muted);
+    margin-bottom: 32px;
+}
+
+.problems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 36px;
+}
+
+.problem-card {
+    background-color: var(--bg-light);
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.problem-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(111, 26, 6, 0.06);
+}
+
+.problem-icon {
+    width: 48px;
+    height: 48px;
+    background-color: #F5F1CD;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-dark);
+}
+
+.problem-card p {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.problem-footer {
+    font-size: 1.1rem;
+    border-left: 4px solid var(--primary-brand);
+    padding-left: 16px;
+    color: var(--primary-dark);
+}
+
+/* --- 3. ETAPAS --- */
+.steps {
+    padding: 60px 0;
+    background-color: var(--bg-light);
+}
+
+.steps h2 {
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--primary-dark);
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.step-card {
+    background-color: var(--bg-card);
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+    position: relative;
+    z-index: 1;
+}
+
+/* Linha tracejada horizontal ligando os cards */
+.step-card:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 40px;
+    right: -24px;
+    width: 24px;
+    height: 2px;
+    border-top: 2px dashed var(--primary-brand);
+    z-index: 2;
+}
+
+.step-num {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-color: var(--primary-dark);
+    color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.step-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--primary-dark);
+}
+
+.steps-included {
+    background-color: var(--bg-card);
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px dashed var(--primary-brand);
+}
+
+.steps-included ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+/* --- 4. O QUE RECEBE --- */
+.deliverables {
+    padding: 60px 0;
+    background-color: var(--bg-card);
+}
+
+.deliverables h2 {
+    margin-bottom: 40px;
+    color: var(--primary-dark);
+    text-align: center;
+}
+
+/* Container flexível lado a lado */
+.deliverables-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.deliverables-list-container {
+    flex: 1;
+}
+
+.deliverables-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.deliverables-list li {
+    margin-bottom: 14px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.check-icon {
+    color: var(--primary-brand);
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+/* Galeria compacta na coluna da direita */
+.gallery-grid {
+    flex: 1.2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 6px 14px rgba(111, 26, 6, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.gallery-grid img:hover {
+    transform: translateY(-4px);
+}
+
+/* --- 5. PARA QUEM É / NÃO É --- */
+.target-audience {
+    padding: 40px 0 60px 0;
+    background-color: var(--bg-card);
+}
+
+.target-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.target-box {
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.target-box h3 {
+    color: var(--primary-dark);
+}
+
+.target-box ul {
+    margin-left: 20px;
+    margin-top: 12px;
+}
+
+.is-for {
+    background-color: #F2F8F2;
+    border: 1px solid #D1E7D1;
+}
+
+.is-not-for {
+    background-color: #FAF0EE;
+    border: 1px solid #F3D0C8;
+}
+
+/* --- 6. OFERTA FINAL --- */
+.offer {
+    padding: 60px 0;
+    background-color: var(--bg-light);
+    text-align: center;
+}
+
+.offer-card {
+    background-color: var(--bg-card);
+    padding: 40px 20px;
+    border-radius: 12px;
+    border: 2px solid var(--border-color);
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 12px 24px rgba(111, 26, 6, 0.06);
+}
+
+.offer-card h2 {
+    color: var(--primary-dark);
+}
+
+.offer-desc {
+    color: var(--text-muted);
+    margin: 16px 0 30px 0;
+}
+
+.price-box {
+    margin-bottom: 24px;
+}
+
+.price-box h3 {
+    color: var(--primary-dark);
+}
+
+.product-type {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.price {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin: 8px 0;
+    color: var(--primary-brand);
+}
+
+.payment-terms {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+/* --- 7. FAQ --- */
+.faq {
+    padding: 60px 0;
+    background-color: var(--bg-card);
+}
+
+.faq h2 {
+    margin-bottom: 24px;
+    text-align: center;
+    color: var(--primary-dark);
+}
+
+.faq-list {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 16px 0;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-question::after {
+    content: '+';
+    font-size: 1.2rem;
+    color: var(--primary-brand);
+}
+
+.faq-item.active .faq-question::after {
+    content: '-';
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+    color: var(--text-muted);
+}
+
+.faq-answer p {
+    padding-bottom: 16px;
+}
+
+.hero,
+.steps,
+.offer {
+    position: relative;
+    background-image:
+        linear-gradient(to right, rgba(111, 26, 6, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(111, 26, 6, 0.04) 1px, transparent 1px);
+    background-size: 32px 32px;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 900px) {
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    /* Em telas menores, a linha tracejada passa a ser vertical */
+    .step-card:not(:last-child)::after {
+        top: 100%;
+        left: 40px;
+        right: auto;
+        width: 2px;
+        height: 32px;
+        border-top: none;
+        border-left: 2px dashed var(--primary-brand);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero-container,
+    .target-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .deliverables-wrapper {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .gallery-grid {
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+}
