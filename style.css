@@ -70,6 +70,11 @@ body {
     margin-top: 8px;
 }
 
+.old-price {
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+
 /* --- 1. HERO --- */
 .hero {
     padding: 60px 0;
